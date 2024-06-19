@@ -2,7 +2,7 @@
 
 The main goal of this repository is to provide a sane stack of containers to make it easy deploying selfhostable service.
 
-I'd like to giveback to the community of [selfhoster](https://reddit.com/r/selfhost)
+I'd like to giveback to the community of [selfhost](https://reddit.com/r/selfhost)ers
 
 Any help would be much appreciated, I've a long list of things to do.
 
