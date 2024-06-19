@@ -1,3 +1,5 @@
+![Logo](https://github.com/EsOsO/self-stack/blob/1425fb760c3c18d3905337ae477ff9356ccb3758/logo.png)
+
 # Self hosted docker stack
 
 The main goal of this repository is to provide a sane stack of containers to make it easy deploying selfhostable service.
