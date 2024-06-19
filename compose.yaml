@@ -1,0 +1,60 @@
+---
+include:
+  # BASE SYSTEM
+  - compose/core/cetusguard.yaml
+  - compose/core/portainer.yaml
+  # TODO: replace portainer with Dockge
+  # - compose/core/dockge.yaml
+  - compose/auth/authelia.yaml
+  - compose/core/traefik.yaml
+  - compose/core/watchtower.yaml
+  - compose/security/crowdsec.yaml
+  # PERSISTENCE
+  - compose/persistence/postgres.yaml
+  - compose/persistence/redict.yaml
+  - compose/persistence/prometheus.yaml
+  # BACKUP
+  - compose/backup/db-backup.yaml
+  - compose/backup/restic.yaml
+  # MONITORING
+  # - compose/monitoring/cadvisor.yaml
+  # - compose/monitoring/grafana.yaml
+  # - compose/monitoring/node-exporter.yaml
+  # NOTIFICATIONS
+  - compose/monitoring/ntfy.yaml
+  # UTILS
+  # - compose/dev/vscodium.yaml
+  # - compose/utils/chromium.yaml
+  # - compose/monitoring/dozzle.yaml
+  - compose/utils/homepage.yaml
+  # - compose/utils/pgadmin.yaml
+  # SERVICES
+  # - compose/services/vaultwarden/compose.yaml
+  # - compose/services/owntracks/compose.yaml
+  # - compose/services/arr/compose.yaml
+
+networks:
+  persistence:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 192.168.92.0/24
+    name: persistence
+  docker_socket:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 192.168.91.0/24
+    name: docker_socket
+  ingress:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 192.168.90.0/24
+    name: ingress
+  arr:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 192.168.93.0/24
+    name: arr
