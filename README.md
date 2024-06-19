@@ -2,7 +2,7 @@
 
 # Self hosted docker stack
 
-The main goal of this repository is to provide a sane stack of containers to make it easy deploying selfhostable service.
+The main goal of this repository is to provide a sane stack of containers to make it easy deploying selfhostable services.
 
 I'd like to giveback to the community of [selfhost](https://reddit.com/r/selfhost)ers
 
